@@ -5,5 +5,4 @@
   tasks:
     - debug:
         msg: hello
-      delegate_to: localhost
 ...
