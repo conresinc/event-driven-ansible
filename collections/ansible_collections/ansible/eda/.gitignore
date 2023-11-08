@@ -1,0 +1,18 @@
+# python
+*.pyc
+
+# venv
+venv
+
+# tests
+tests/output
+.pytest_cache/
+.tox
+.ruff*
+
+# Ide's
+.vscode
+.idea
+
+# Builds
+*.tar.gz

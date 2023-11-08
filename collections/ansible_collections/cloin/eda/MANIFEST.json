@@ -1,0 +1,32 @@
+{
+ "collection_info": {
+  "namespace": "cloin",
+  "name": "eda",
+  "version": "2.1.15",
+  "authors": [
+   "Colin McNaughton <@cloin>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "eda",
+   "elasticsearch",
+   "infrastructure"
+  ],
+  "description": "Event-Driven Ansible content",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {},
+  "repository": "https://github.com/cloin/cloin.eda",
+  "documentation": "https://github.com/cloin/cloin.eda/tree/main/docs",
+  "homepage": null,
+  "issues": "https://github.com/cloin/cloin.eda/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "aad3b98634e513a02588f99ad0262201ba4223f48c613883c8dfffa14cc831ed",
+  "format": 1
+ },
+ "format": 1
+}
