@@ -1,5 +1,5 @@
 - name: Elastic events
-  hosts: localhost
+  hosts: any
   sources:
     - cloin.eda.elastic:
         elastic_host: 10.44.5.106
