@@ -2,7 +2,7 @@
   hosts: localhost
   sources:
     - elastic:
-        elastic_host: https://elk-stack1.integ.conres.com
+        elastic_host: elk-stack1.integ.conres.com
         elastic_port: 9200
         elastic_username: elastic
         elastic_password: 'p3WnX6S56WDtb6=wf30Y'
