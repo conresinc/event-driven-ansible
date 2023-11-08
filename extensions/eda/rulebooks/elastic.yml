@@ -2,11 +2,11 @@
   hosts: localhost
   sources:
     - cloin.eda.elastic:
-        host: https://elk-stack1.integ.conres.com
-        port: 9200
-        username: elastic
-        password: 'p3WnX6S56WDtb6=wf30Y'
-        index_pattern: filebeat-*
+        elastic_host: https://elk-stack1.integ.conres.com
+        elastic_port: 9200
+        elastic_username: elastic
+        elastic_password: 'p3WnX6S56WDtb6=wf30Y'
+        elastic_index_pattern: filebeat-*
         query: |
           term:
             container.name.keyword: nginx
