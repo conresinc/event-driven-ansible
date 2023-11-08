@@ -7,3 +7,5 @@ systemd-python
 dpath
 pyyaml
 dpath
+python-dateutil==2.8.2
+elasticsearch==8.7.0
