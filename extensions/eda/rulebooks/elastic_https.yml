@@ -10,7 +10,7 @@
         query: |
           term:
             observer.hostname: NH_PS_Integ_FW_1 
-        interval: 5
+        interval: 20
 
   rules:
     - name: Debug event
