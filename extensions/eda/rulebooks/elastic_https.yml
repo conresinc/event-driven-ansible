@@ -14,6 +14,6 @@
 
   rules:
     - name: Debug event
-      condition: event.ecs is defined and event_subtype == "http_access_error"
+      condition: event.ecs is defined and event.subtype == "http_access_error"
       action:
         debug:
