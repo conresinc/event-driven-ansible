@@ -8,16 +8,12 @@
         elastic_password: "{{ elk_password }}"
         elastic_index_pattern: logs-*
         query: |
-          bool:
-            must:
-              - term:
-                  cisco_meraki.event_type.keyword: "urls"
-              - term:
-                  event.event_subtype.keyword: "http_access_error"
+          term:
+            cisco_meraki.event_type.keyword: urls
         interval: 20
 
   rules:
     - name: Debug event
-      condition: event.ecs is defined
+      condition: event.ecs is defined and event.urls.event_subtype == "http_access_error"
       action:
         debug:
