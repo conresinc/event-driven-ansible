@@ -11,9 +11,9 @@
           bool:
             must:
               - term:
-                cisco_meraki.event_type.keyword: urls
+                  cisco_meraki.event_type.keyword: urls
               - term:
-                event.event_subtype.keyword: http_access_error
+                  event.event_subtype.keyword: http_access_error
         interval: 20
 
   rules:
