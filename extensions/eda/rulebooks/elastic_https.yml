@@ -9,11 +9,11 @@
         elastic_index_pattern: logs-*
         query: |
           term:
-            cisco_meraki.event_type.keyword: urls
+            observer.hostname: NH_PS_Integ_FW_1
         interval: 20
 
   rules:
     - name: Debug event
-      condition: event.ecs is defined and event.urls.event_subtype == "http_access_error"
+      condition: event.ecs is defined and event.event_subtype == "http_access_error"
       action:
         debug:
