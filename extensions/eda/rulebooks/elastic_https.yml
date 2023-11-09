@@ -6,14 +6,14 @@
         elastic_port: "{{ elk_port }}"
         elastic_username: "{{ elk_username }}"
         elastic_password: "{{ elk_password }}"
-        elastic_index_pattern: "{{ elk_index_pattern }}"
+        elastic_index_pattern: logs-*
         query: |
           term:
-            container.name.keyword: nginx
+            observer.hostname: NH_PS_Integ_FW_1 
         interval: 5
 
   rules:
     - name: Debug event
-      condition: event.ecs is defined and event.nginx.log_level == "error"
+      condition: event.ecs is defined and cisco_meraki.event_subtype == "http_access_error"
       action:
         debug:
