@@ -2,11 +2,11 @@
   hosts: localhost
   sources:
     - cloin.eda.elastic:
-        elastic_host: 10.44.5.106
-        elastic_port: 9200
-        elastic_username: elastic
-        elastic_password: 'p3WnX6S56WDtb6=wf30Y'
-        elastic_index_pattern: filebeat-*
+        elastic_host: "{{ elk_host }}"
+        elastic_port: "{{ elk_port }}"
+        elastic_username: "{{ elk_username }}"
+        elastic_password: "{{ elk_password }}"
+        elastic_index_pattern: "{{ elk_index_pattern }}"
         query: |
           term:
             container.name.keyword: nginx
