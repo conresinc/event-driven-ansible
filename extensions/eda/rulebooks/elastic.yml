@@ -2,7 +2,7 @@
   hosts: localhost
   sources:
     - cloin.eda.elastic:
-        elastic_host: 10.44.5.106
+      elastic_host: https://10.44.5.106
         elastic_port: 9200
         elastic_username: elastic
         elastic_password: 'p3WnX6S56WDtb6=wf30Y'
