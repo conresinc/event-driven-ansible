@@ -8,12 +8,16 @@
         elastic_password: "{{ elk_password }}"
         elastic_index_pattern: logs-*
         query: |
-          term:
-            observer.hostname: NH_PS_Integ_FW_1
+          bool:
+            must:
+              - term:
+                cisco_meraki.event_type.keyword: urls
+              - term:
+                event.event_subtype.keyword: http_access_error
         interval: 20
 
   rules:
     - name: Debug event
-      condition: event.ecs is defined and event.type == "error"
+      condition: event.ecs is defined
       action:
         debug:
